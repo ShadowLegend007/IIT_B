@@ -1,6 +1,35 @@
 // NebulaPets Animation System
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+// Wait for GSAP to be loaded
+if (typeof gsap === 'undefined') {
+  console.warn('GSAP is not loaded. Animations will be disabled.');
+  // Create a mock GSAP object to prevent errors
+  window.gsap = {
+    registerPlugin: () => {},
+    timeline: () => ({
+      to: () => {},
+      from: () => {},
+      fromTo: () => {},
+      set: () => {},
+      add: () => {},
+      play: () => {},
+      pause: () => {},
+      reverse: () => {},
+      restart: () => {}
+    }),
+    to: () => {},
+    from: () => {},
+    fromTo: () => {},
+    set: () => {},
+    ScrollTrigger: {
+      create: () => {},
+      refresh: () => {},
+      update: () => {}
+    }
+  };
+} else {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 // Animation Controller Class
 class NebulaPetsAnimations {
@@ -311,7 +340,9 @@ const AnimationUtils = {
 
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  window.nebulaPetsAnimations = new NebulaPetsAnimations();
+  if (typeof gsap !== 'undefined') {
+    window.nebulaPetsAnimations = new NebulaPetsAnimations();
+  }
 });
 
 // Export for module systems (if needed)

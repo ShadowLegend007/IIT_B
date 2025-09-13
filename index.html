@@ -11,9 +11,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="anime.js"></script>
+  <script src="app.js"></script>
+  <script src="ui-components.js"></script>
 </head>
 <body>
-  <section class="hero">
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#hero" aria-label="NebulaPets Home">NebulaPets</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+        <li role="none"><a href="#features" role="menuitem">Features</a></li>
+        <li role="none"><a href="#about" role="menuitem">About</a></li>
+        <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
     <div class="hero-content">
       <h1 class="glitch animate-title" data-text="NebulaPets">NebulaPets</h1>
       <p class="tagline animate-tagline">AI Pet Sitting for Galactic Explorers 🚀</p>
@@ -29,14 +52,309 @@
           <li class="animate-list-item">💡 24/7 support from our expert tech team</li>
         </ul>
       </div>
-      <a href="#signup" class="cta-btn animate-btn">Reserve Your Launchpad</a>
+      <a href="#contact" class="cta-btn animate-btn">Reserve Your Launchpad</a>
     </div>
     <div class="hero-graphic animate-graphic">
-      <div class="orbit">
-        <div class="planet animate-planet"></div>
+      <div class="space-illustration">
+        <!-- Orbital Rings -->
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring"></div>
+        
+        <!-- Central Planet -->
+        <div class="central-planet animate-planet"></div>
+        
+        <!-- Orbiting Satellites -->
         <div class="satellite animate-satellite"></div>
+        <div class="satellite"></div>
+        <div class="satellite"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        
+        <!-- Twinkling Stars -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
       </div>
     </div>
   </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Why Choose NebulaPets?</h2>
+      
+      <!-- Features Tabs -->
+      <div class="features-tabs animate-on-scroll" data-tabs>
+        <ul class="ui-tabs-list" role="tablist">
+          <li role="presentation">
+            <button class="ui-tab" role="tab" aria-selected="true" aria-controls="panel-0" id="tab-0">
+              🛡️ Security
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="ui-tab" role="tab" aria-selected="false" aria-controls="panel-1" id="tab-1">
+              🤖 AI Technology
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="ui-tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2">
+              🌐 Platform
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="ui-tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">
+              🚀 Experience
+            </button>
+          </li>
+        </ul>
+
+        <div class="ui-tabpanel" role="tabpanel" aria-labelledby="tab-0" id="panel-0" aria-hidden="false">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🔒</div>
+              <h3>Military-Grade Encryption</h3>
+              <p>Your pet's data is protected with AES-256 encryption, ensuring complete privacy and security for all communications.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📹</div>
+              <h3>Secure Video Monitoring</h3>
+              <p>End-to-end encrypted video streams with zero-knowledge architecture. Only you can access your pet's footage.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔐</div>
+              <h3>Biometric Access</h3>
+              <p>Advanced biometric authentication ensures only authorized personnel can access your pet's care area.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-tabpanel" role="tabpanel" aria-labelledby="tab-1" id="panel-1" aria-hidden="true">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🧠</div>
+              <h3>Neural Network AI</h3>
+              <p>Our advanced AI learns your pet's unique patterns and adapts care routines for optimal health and happiness.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>Predictive Analytics</h3>
+              <p>Machine learning algorithms predict your pet's needs and alert you to potential health issues before they develop.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <h3>Personalized Care</h3>
+              <p>AI-driven care plans tailored to your pet's breed, age, health status, and individual personality traits.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-tabpanel" role="tabpanel" aria-labelledby="tab-2" id="panel-2" aria-hidden="true">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🌐</div>
+              <h3>Universal Dashboard</h3>
+              <p>Access your pet's status from any device, anywhere in the galaxy. Real-time updates and control at your fingertips.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h3>Mobile App</h3>
+              <p>Native mobile apps for iOS and Android with offline capabilities and push notifications for instant updates.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔗</div>
+              <h3>API Integration</h3>
+              <p>Connect with your existing smart home systems and third-party pet care applications through our robust API.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-tabpanel" role="tabpanel" aria-labelledby="tab-3" id="panel-3" aria-hidden="true">
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">💡</div>
+              <h3>24/7 Expert Support</h3>
+              <p>Round-the-clock support from certified pet care specialists and veterinary professionals available via chat, call, or video.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⭐</div>
+              <h3>Premium Service</h3>
+              <p>White-glove service with dedicated account managers and priority support for all your pet care needs.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎉</div>
+              <h3>Peace of Mind</h3>
+              <p>Travel with confidence knowing your beloved companion is receiving the best possible care while you explore the cosmos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text animate-on-scroll">
+          <h2 class="section-title">About NebulaPets</h2>
+          <p>NebulaPets revolutionizes pet care for space travelers. Our advanced neural networks and real-time IoT monitoring ensure your beloved companions receive the best care while you explore the cosmos.</p>
+          <p>Founded by a team of AI researchers and pet lovers, we understand that leaving your pet behind shouldn't mean leaving your worries behind. Our technology bridges the gap between space exploration and responsible pet ownership.</p>
+        </div>
+        <div class="about-stats animate-on-scroll">
+          <!-- Stats Carousel -->
+          <div class="stats-carousel" data-carousel>
+            <div class="ui-carousel-slide" aria-hidden="true">
+              <div class="stat">
+                <div class="stat-number">10,000+</div>
+                <div class="stat-label">Happy Pets</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+              </div>
+            </div>
+            <div class="ui-carousel-slide" aria-hidden="true">
+              <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Galaxies Served</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">1M+</div>
+                <div class="stat-label">Hours Monitored</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Satisfaction</div>
+              </div>
+            </div>
+            <div class="ui-carousel-slide" aria-hidden="true">
+              <div class="stat">
+                <div class="stat-number">5★</div>
+                <div class="stat-label">Average Rating</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Pet Species</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Incidents</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info animate-on-scroll">
+          <h3>Ready to Launch?</h3>
+          <p>Join thousands of space explorers who trust NebulaPets with their beloved companions. Get started today!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <span>contact@nebulapets.space</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📱</span>
+              <span>+1 (555) 123-GALAXY</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🌍</span>
+              <span>Space Station Alpha, Sector 7</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form animate-on-scroll" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name *</label>
+            <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
+            <div class="error-message" id="name-error" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+            <div class="error-message" id="email-error" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <div class="form-group">
+            <label for="pet-type" class="form-label">Pet Type</label>
+            <select id="pet-type" name="pet-type" class="form-select">
+              <option value="">Select your pet type</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="bird">Bird</option>
+              <option value="reptile">Reptile</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">Message *</label>
+            <textarea id="message" name="message" class="form-textarea" rows="5" required aria-describedby="message-error"></textarea>
+            <div class="error-message" id="message-error" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+            <label for="newsletter" class="checkbox-label">Subscribe to our newsletter for space pet care tips</label>
+          </div>
+          
+          <button type="submit" class="form-submit">Send Message</button>
+          <div class="form-success" id="form-success" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>NebulaPets</h3>
+          <p class="tagline">AI Pet Sitting for Galactic Explorers</p>
+          <p>Trusted by space travelers across the galaxy. Your pet's safety and happiness are our mission.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="LinkedIn">💼</a>
+            <a href="#" aria-label="YouTube">📺</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 NebulaPets. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
