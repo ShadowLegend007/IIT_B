@@ -8,30 +8,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
   <title>NebulaPets – AI Space Pet Sitter</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="anime.js"></script>
 </head>
 <body>
   <section class="hero">
     <div class="hero-content">
-      <h1 class="glitch" data-text="NebulaPets">NebulaPets</h1>
-      <p class="tagline">AI Pet Sitting for Galactic Explorers 🚀</p>
-      <div class="desc">
+      <h1 class="glitch animate-title" data-text="NebulaPets">NebulaPets</h1>
+      <p class="tagline animate-tagline">AI Pet Sitting for Galactic Explorers 🚀</p>
+      <div class="desc animate-desc">
         <p>
           <span class="highlight">Board your shuttle, not your worries.</span><br>
           NebulaPets uses advanced neural networks and real-time IoT monitoring to provide secure, personalized care for your pets while you travel beyond the stars.  
         </p>
-        <ul>
-          <li>🔒 Encrypted video monitoring & instant notifications</li>
-          <li>🧠 Adaptive AI routines tailored to your pet’s behavior</li>
-          <li>🌐 Cloud dashboard for monitoring & control</li>
-          <li>💡 24/7 support from our expert tech team</li>
+        <ul class="animate-list">
+          <li class="animate-list-item">🔒 Encrypted video monitoring & instant notifications</li>
+          <li class="animate-list-item">🧠 Adaptive AI routines tailored to your pet's behavior</li>
+          <li class="animate-list-item">🌐 Cloud dashboard for monitoring & control</li>
+          <li class="animate-list-item">💡 24/7 support from our expert tech team</li>
         </ul>
       </div>
-      <a href="#signup" class="cta-btn">Reserve Your Launchpad</a>
+      <a href="#signup" class="cta-btn animate-btn">Reserve Your Launchpad</a>
     </div>
-    <div class="hero-graphic">
+    <div class="hero-graphic animate-graphic">
       <div class="orbit">
-        <div class="planet"></div>
-        <div class="satellite"></div>
+        <div class="planet animate-planet"></div>
+        <div class="satellite animate-satellite"></div>
       </div>
     </div>
   </section>
